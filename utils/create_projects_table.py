@@ -8,7 +8,7 @@ boto3.setup_default_session(profile_name=os.environ['PROFILE_NAME'])
 dynamodb = boto3.resource('dynamodb', endpoint_url='http://localhost:8000')
 
 # Define the table schema
-table_name = 'projects'
+table_name = 'ProjectsTable'
 key_schema = [
     {
         'AttributeName': 'id',
