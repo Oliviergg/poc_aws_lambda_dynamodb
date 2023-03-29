@@ -4,7 +4,7 @@ import boto3
 import os
 
 # Set up the DynamoDB client
-boto3.setup_default_session(profile_name='ogg-local')
+boto3.setup_default_session(profile_name=os.environ['PROFILE_NAME'])
 dynamodb = boto3.resource('dynamodb', endpoint_url='http://localhost:8000')
 
 # Define the table schema
